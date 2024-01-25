@@ -83,4 +83,16 @@ window.addEventListener('scroll', function () {
       });
   });
 
+  function toggleDarkMode() {
+    const lightMode = document.getElementById('light-mode');
+    const darkMode = document.getElementById('dark-mode');
+
+    if (lightMode.disabled) {
+        lightMode.disabled = false;
+        darkMode.disabled = true;
+    } else {
+        lightMode.disabled = true;
+        darkMode.disabled = false;
+    }
+}
 

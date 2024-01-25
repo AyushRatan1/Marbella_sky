@@ -10,8 +10,10 @@
   <!--
     - custom css link 
   -->
-<link rel="stylesheet" href="./assets/css/foodhub.css">
-<link rel="stylesheet" href="./assets/css/media_query.css">
+<link rel="stylesheet" href="./assets/css/foodhub.css" id="light-mode">
+<link rel="stylesheet" href="./assets/css/media_query.css" id="light-mode" >
+<link rel="stylesheet" href="./assets/css/foodhub_dark.css" id="dark-mode" disabled>
+<link rel="stylesheet" href="./assets/css/media_query.css" id="dark-mode" >
 
 
   <!--
@@ -75,9 +77,10 @@
           <h1 class="heading" aria-label="nebula">
             Marbella Sky Lounge
           </h1>
+          
 
           <div class="navbar-btn-group">
-
+            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark/Light</button>
             
 
             <button class="menu-toggle-btn">
@@ -89,6 +92,8 @@
           </div>
 
         </div>
+        
+
 
       </nav>
 
