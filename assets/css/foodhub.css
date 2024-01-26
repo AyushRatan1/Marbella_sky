@@ -1083,6 +1083,41 @@ body {
   background-color: #f0f0f0; /* Change background color on hover */
 }
 
+/* Location Info Section */
+.location-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px; /* Adjust as needed */
+}
 
+/* Location Box */
+/* Adjusted CSS styles for Location Box */
+.location-box {
+   /* Set width of location box */
+  border: 2px solid #ccc; /* Add border */
+  border-radius: 8px; /* Add border radius */
+  padding: 15px; /* Add padding */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for 3D effect */
+  margin-left: 120px; /* Shift the location box to the right side */
+}
+
+/* Written Content */
+.written-content {
+  margin-left: 40px;
+  
+  text-align: center;
+}
+
+.written-content h2 {
+  font-size: 24px; /* Adjust as needed */
+  margin-bottom: 15px;
+  margin-left: 90px;
+}
+
+.written-content p {
+  font-size: 16px; /* Adjust as needed */
+  line-height: 1.5;
+}
 /* Additional styles for the dark mode toggle button */
 /* Add your styles here */
