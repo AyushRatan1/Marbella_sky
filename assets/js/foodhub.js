@@ -1,4 +1,22 @@
-'use strict';
+
+document.addEventListener('DOMContentLoaded', function () {
+  const carouselInner = document.querySelector('.carousel-inner');
+  const images = document.querySelectorAll('.carousel-inner img');
+  const totalImages = images.length;
+  const imageWidth = images[0].clientWidth;
+  const carouselWidth = document.querySelector('.carousel').clientWidth;
+  const visibleImages = 6; // Number of images visible at a time
+  let counter = 0;
+
+  setInterval(() => {
+    counter++;
+    if (counter >= totalImages - visibleImages + 1) {
+      counter = 0;
+    }
+    carouselInner.style.transition = 'transform 1s ease';
+    carouselInner.style.transform = `translateX(-${counter * (carouselWidth / visibleImages)}px)`;
+  }, 3000); // Adjust speed (in milliseconds) as needed
+});
 
 // navbar variables
 const nav = document.querySelector('.navbar-nav');
