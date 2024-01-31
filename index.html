@@ -58,15 +58,18 @@
             </li>
 
             <li>
-              <a href="#about" class="nav-link">About</a>
+              <a href="#menu" class="nav-link">Menu</a>
             </li>
 
             <li>
               <a href="#services" class="nav-link">Services</a>
             </li>
+            <li>
+              <a href="#services" class="nav-link">Celebrations</a>
+            </li>
 
             <li>
-              <a href="#menu" class="nav-link">Our Menu</a>
+              <a href="#menu" class="nav-link">Chef's Specials</a>
             </li>
 
              <li>
@@ -108,7 +111,7 @@
         - #HOME SECTION
       -->
       <div id="app">
-        <div class="title">
+        <div class="title" id="home">
           <div class="title-inner">
             <div class="cafe">
               <div class="cafe-inner">Marbella Sky</div>
@@ -158,7 +161,7 @@
     
       
 
-          <section class="home" id="home">
+          <section class="home" id="menu">
 
             <div class="home-left">
     
@@ -172,15 +175,14 @@
             
           
 
-          <div class="btn-group">
-
-            <button class="btn btn-primary btn-icon">
-              <img src="./assets/images/menu.svg" alt="menu icon">
-              <div class="links"><a href="https://b.zmtcdn.com/data/menus/997/20930997/b1e33f4bcd5707f3993f4ab6e2cf9087.jpg?output-format=webp">
-              Our menu
-              </a>
-            </div>
-            </button>
+            <div class="btn-group">
+              <button class="btn btn-primary btn-icon" onclick="openPopup()">
+                  <img src="./assets/images/menu.svg" alt="menu icon"> Our menu
+              </button>
+          
+          
+          
+          
 
             <button class="btn btn-secondary btn-icon">
               <img src="./assets/images/arrow.svg" alt="menu icon">
@@ -188,7 +190,7 @@
             </button>
 
           </div>
-
+          
         </div>
         
 
@@ -703,7 +705,20 @@ Ambience is really good and if you love open air rooftop ambience you'll enjoy i
   <script src="https://cdn.jsdelivr.net/npm/animejs"></script>
 
   
-  
+  <div id="popup" class="popup-container">
+    <div class="popup-content">
+      <!-- Close button -->
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <!-- Image container -->
+      <div id="image-container">
+        <!-- Images provided in the HTML markup -->
+        <img src="https://github.com/AyushRatan1/Marbella_sky/blob/01b305e5e590cda788bf43978ed3405d8003fab2/assets/images/menu1.png" alt="Image 1">
+        <img src="https://github.com/AyushRatan1/Marbella_sky/blob/01b305e5e590cda788bf43978ed3405d8003fab2/assets/images/menu1.png" alt="Image 2">
+        <img src="https://github.com/AyushRatan1/Marbella_sky/blob/01b305e5e590cda788bf43978ed3405d8003fab2/assets/images/menu1.png" alt="Image 3">
+        <!-- Add more image tags here -->
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
