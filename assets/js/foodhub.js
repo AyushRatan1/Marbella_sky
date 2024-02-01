@@ -114,3 +114,31 @@ window.addEventListener('scroll', function () {
     }
 }
 
+
+function openPopup() {
+  // Show the popup
+  document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+  // Hide the popup
+  document.getElementById("popup").style.display = "none";
+}
+// Function to open drinks popup
+function openDrinksPopup() {
+  document.getElementById("drinks-popup").style.display = "block";
+}
+
+// Function to close drinks popup
+function closeDrinksPopup() {
+  document.getElementById("drinks-popup").style.display = "none";
+}
+
+
+
+
+  
+  
+ 
+
+
