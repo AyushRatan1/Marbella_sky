@@ -136,6 +136,31 @@ function closeDrinksPopup() {
 
 
 
+// JavaScript for toggling the menu
+// JavaScript for toggling the menu
+function toggleMenu() {
+  var menu = document.getElementById("navbarMenu");
+  if (menu.style.display === "block") {
+      menu.style.display = "none";
+  } else {
+      menu.style.display = "block";
+  }
+}
+
+// JavaScript to detect mobile device and add toggleable options
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+  var navbarMenu = document.getElementById("navbarMenu");
+
+  // Add your toggleable options here
+  var options = ["Option 1", "Option 2", "Option 3"];
+
+  options.forEach(function(option) {
+    var li = document.createElement("li");
+    li.textContent = option;
+    li.classList.add("nav-item");
+    navbarMenu.appendChild(li);
+  });
+}
 
   
   
