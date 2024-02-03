@@ -1165,6 +1165,7 @@ body {
 }
 .carousel-text{
   font-size: xx-large;
+  margin-left: 185px;
 }
 
 body {
@@ -1281,7 +1282,7 @@ body {
 }
 
 .about-video {
-  width: 100%;
+  width: 50%;
   height: auto; /* Allow height to adjust according to width */
   display: block;
   border-radius: 8px; /* Optional: Add rounded corners */
@@ -1335,11 +1336,11 @@ body {
   width: 100%; /* Adjust width to fill the available space */
   overflow-x: auto; /* Enable horizontal scrolling on mobile devices */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
-  margin-left: -15px;
+  margin-left: 5px;
 }
 .carousel-text {
   font-size: xx-large;
-  margin-right: 100px;
+  margin-left: 119px;
 }
 
 .carousel-inner {
@@ -1424,7 +1425,15 @@ body {
   transform: translateY(-50%);
   width: fit-content;
 }
-
-
+.section-title{
+  font-size: 20px;
+  margin-left: -17px;
+}
+.about-right p {
+  margin-left: 69px;
+}
+.social-logos {
+  margin-left: 21px;
 }
 
+}
