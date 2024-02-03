@@ -1321,7 +1321,8 @@ body {
   max-width: 500px; /* Set a maximum width to prevent overflowing on smaller screens */
   
   border-radius: 8px;
-  padding: 15px;box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto 20px; /* Center the location box and add bottom margin */
   overflow: hidden; /* Hide overflowing content */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
