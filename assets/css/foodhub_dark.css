@@ -1221,9 +1221,13 @@ body {
     padding: 0 20px; /* Adjust container padding */
     max-width: 100%; /* Ensure container takes full width */
   }
+  .heading{
+    font-size:x-large ;
+    margin: 52px;
+  }
 
   .navbar-logo {
-    margin-left: 20px; /* Adjust navbar logo margin */
+    margin-left: -16px; /* Adjust navbar logo margin */
   }
 
   .split-layout {
@@ -1384,12 +1388,14 @@ body {
 .cafe-inner {
   display: inline-block;
   font-size: 70px;
+  animation: none;
  
 }
 
 .cafe, .mozart {
  
   font-size: 70px;
+  animation: none;
 }
 
 .popup-content {

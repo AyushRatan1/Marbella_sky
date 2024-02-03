@@ -1231,7 +1231,12 @@ body {
   }
 
   .navbar-logo {
-    margin-left: 20px; /* Adjust navbar logo margin */
+    margin-left: -16px; /* Adjust navbar logo margin */
+  }
+  .heading{
+    font-size:x-large ;
+    margin: 52px;
+   
   }
 
   .split-layout {
@@ -1390,12 +1395,13 @@ body {
 .cafe-inner {
   display: inline-block;
   font-size: 70px;
- 
+  animation:none;
 }
 
 .cafe, .mozart {
  
   font-size: 70px;
+  animation:none;
 }
 
 .popup-content {
