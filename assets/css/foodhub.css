@@ -181,7 +181,7 @@ html {
   transform: translateX(-50%);
   width: 100%;
   padding: 20px 30px;
-  background: hsla(0, 0%, 100%, 0.99);
+  background: hsla(0, 0%, 100%, 1);
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.05);
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.05);
   z-index: 1000;
@@ -776,8 +776,10 @@ footer {
 }
 .about-video2 {
   width: 100%;
-  height: 900px;
+  height: 800px;
   display: block;
+  margin-left: 82px;
+  margin-top: 11px;
   
  
 }
@@ -928,7 +930,7 @@ body {
   width: 100%;
   background: white;
   color: #3a3535;
-  margin-top: -65px;
+  margin-top: -48px;
 }
 
 body {
@@ -948,7 +950,7 @@ body {
   font-size: 8vw;
   width: 100%;
   z-index: 2;
-  color: #000000;
+  color: #1b1b19;
 
   // start
 
@@ -1007,10 +1009,16 @@ body {
 
 .mozart-inner {
   animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  font-size: 35px;
+  margin-top: 25px;
+}
+.mozart{
+  margin-top: 9px;
 }
 
 .title {
   animation: outer-left 1s 1s ease both;
+  margin-left: -45px;
 }
 
 .cafe {
@@ -1132,7 +1140,7 @@ body {
 .written-content h2 {
   font-size: 24px; /* Adjust as needed */
   margin-bottom: 15px;
-  margin-left: 90px;
+  margin-left: 67px;
 }
 
 .written-content p {
@@ -1231,12 +1239,12 @@ body {
   }
 
   .navbar-logo {
-    margin-left: -16px; /* Adjust navbar logo margin */
+    margin-left: 146px; /* Adjust navbar logo margin */
   }
   .heading{
-    font-size:x-large ;
-    margin: 70px;
-   
+    font-size:19px ;
+    margin: 6px;
+    right: 164px;
   }
 
   .split-layout {
@@ -1248,13 +1256,15 @@ body {
   .right-content {
     width: 100%; /* Full width for content sections */
     padding: 20px; /* Adjust padding */
+    margin-top: -50px;
+    margin-bottom: 60px;
   }
 
   .image {
     margin-left: -160px; /* Reset margin */
     width: 106%; /* Full width for image */
     padding: 21px; /* Adjust padding */
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   .title {
@@ -1291,6 +1301,9 @@ body {
   height: auto; /* Allow height to adjust according to width */
   display: block;
   border-radius: 8px; /* Optional: Add rounded corners */
+}
+.title{
+  color: #ffffff;
 }
 
 .gallery {
@@ -1387,20 +1400,23 @@ body {
   margin-right: 60px;
 }
 .about-video2 {
-  width: 230%;
-  height: 291px;
+  width: 215%;
+  height: 492px;
   display: block;
-  border-radius: 8px;
+  margin-left: -14px;
+  padding-bottom: 89px;
+  margin-top: -121px;
+  margin-bottom: -208px;
 }
 .cafe-inner {
   display: inline-block;
-  font-size: 70px;
+  font-size: 50px;
   animation:none;
 }
 
 .cafe, .mozart {
  
-  font-size: 70px;
+  font-size: 30px;
   animation:none;
 }
 
@@ -1431,6 +1447,7 @@ body {
   left: 60px;
   transform: translateY(-50%);
   width: fit-content;
+  margin-left: -153px;
 }
 .section-title{
   font-size: 20px;
@@ -1442,5 +1459,34 @@ body {
 .social-logos {
   margin-left: 21px;
 }
+.gallery {
+  
+  
+  &:has(:hover) img:not(:hover),
+  &:has(:focus) img:not(:focus){
+    filter: brightness(0.5) contrast(0.5);
+  }
 
+  & img {
+    
+
+    &:nth-child(5n - 1) { grid-column: auto;}
+
+    &:hover,
+    &:focus {
+      clip-path: path("M0,0 C0,0 200,0 200,0 200,0 200,100 200,100 200,100 200,200 200,200 200,200 100,200 100,200 100,200 100,200 0,200 0,200 0,100 0,100 0,100 0,100 0,100Z");
+      z-index: 2;
+      transition: clip-path 0.25s, filter 0.25s;
+    }
+    
+    &:focus {
+      outline: 1px dashed rgb(255, 254, 254);
+      outline-offset: -5px;
+    }
+  }
+}
+
+.home{
+  margin-top: -60px;
+}
 }
