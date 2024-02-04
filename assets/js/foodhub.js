@@ -1,22 +1,100 @@
 
-document.addEventListener('DOMContentLoaded', function () {
-  const carouselInner = document.querySelector('.carousel-inner');
-  const images = document.querySelectorAll('.carousel-inner img');
-  const totalImages = images.length;
-  const imageWidth = images[0].clientWidth;
-  const carouselWidth = document.querySelector('.carousel').clientWidth;
-  const visibleImages = 6; // Number of images visible at a time
-  let counter = 0;
+document.addEventListener("DOMContentLoaded", function () {
+  const animatedText1 = document.getElementById("animated-text");
+  const animatedText2 = document.getElementById("animated-text-2");
 
-  setInterval(() => {
-    counter++;
-    if (counter >= totalImages - visibleImages + 1) {
-      counter = 0;
-    }
-    carouselInner.style.transition = 'transform 1s ease';
-    carouselInner.style.transform = `translateX(-${counter * (carouselWidth / visibleImages)}px)`;
-  }, 3000); // Adjust speed (in milliseconds) as needed
+  // Check if the screen width is less than a certain value (e.g., 600px for mobile screens)
+  const isMobile = window.innerWidth < 600;
+
+  // Call the appropriate animation function based on the screen size
+  if (isMobile) {
+    animateMobileTextSequence(animatedText1, animatedText2);
+  } else {
+    animateDesktopTextSequence(animatedText1, animatedText2);
+  }
 });
+
+function animateDesktopTextSequence(animatedText1, animatedText2) {
+  // Create a timeline with anime.js for the desktop animation sequence
+  anime.timeline()
+    .add({
+      targets: animatedText1,
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 1000,
+    })
+    .add({
+      targets: animatedText1,
+      opacity: [1, 1],
+      easing: "easeInOutQuad",
+      duration: 1000,
+      delay: 2000,
+    })
+    .add({
+      targets: animatedText2,
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 1000,
+    })
+    .add({
+      targets: animatedText2,
+      opacity: [1, 0],
+      easing: "easeInOutQuad",
+      duration: 1000,
+      delay: 5000,
+    })
+    .add({
+      targets: animatedText1,
+      opacity: [1, 1],
+      easing: "easeInOutQuad",
+      duration: 1000,
+    })
+    .add({
+      targets: animatedText1,
+      opacity: [1, 1],
+      easing: "easeInOutQuad",
+      duration: 1000,
+      delay: 2000,
+      complete: function(anim) {
+        // Animation complete, do something here if needed
+      }
+    });
+}
+
+function animateMobileTextSequence(animatedText1, animatedText2) {
+  // Create a timeline with anime.js for the mobile animation sequence
+  anime.timeline()
+    .add({
+      targets: animatedText1,
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 1500,
+      delay:7500,
+    })
+    .add({
+      targets: animatedText2,
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 1500,
+      
+    })
+    .add({
+      targets: animatedText1,
+      opacity: [1, 0],
+      easing: "easeInOutQuad",
+      duration: 1000,
+    })
+    .add({
+      targets: animatedText2,
+      opacity: [1, 0],
+      easing: "easeInOutQuad",
+      duration: 1000,
+      complete: function(anim) {
+        // Animation complete, do something here if needed
+      }
+    });
+}
+
 
 // navbar variables
 const nav = document.querySelector('.navbar-nav');
