@@ -38,7 +38,7 @@ function animateDesktopTextSequence(animatedText1, animatedText2) {
     })
     .add({
       targets: animatedText2,
-      opacity: [1, 0],
+      opacity: [1, 1],
       easing: "easeInOutQuad",
       duration: 1000,
       delay: 5000,
