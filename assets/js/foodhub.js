@@ -240,7 +240,34 @@ if (/Mobi|Android/i.test(navigator.userAgent)) {
   });
 }
 
-  
+  // Add smooth scrolling behavior for the entire page
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all anchor links
+  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+  // Iterate over each anchor link
+  anchorLinks.forEach(link => {
+    // Add click event listener to each anchor link
+    link.addEventListener("click", function(e) {
+      // Prevent default behavior of anchor link
+      e.preventDefault();
+
+      // Get the target element's ID
+      const targetId = this.getAttribute("href").substring(1);
+
+      // Find the target element
+      const targetElement = document.getElementById(targetId);
+
+      // Scroll to the target element with smooth behavior
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+});
+
   
  
 
